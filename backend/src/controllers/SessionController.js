@@ -7,6 +7,6 @@ module.exports = {
         if (!user) {
             user = await User.create({ email });
         }
-        return res.json(user);
+        return res.status(201).json(user);
     }
 };

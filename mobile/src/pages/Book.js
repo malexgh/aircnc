@@ -7,6 +7,7 @@ export default function Book({ navigation }) {
     const id = navigation.getParam('id');
 
     async function handleSubmit() {
+        if(date.trim() === '') return;
         const user_id = await AsyncStorage.getItem('user');
         const response = await api.post(`/spots/${id}/bookings`, { date }, { headers: { user_id } });
         console.log(response.data);

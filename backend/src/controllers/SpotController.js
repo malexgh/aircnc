@@ -24,6 +24,6 @@ module.exports = {
             techs: techs.split(',').map((tech) => tech.trim()),
             user: user_id
         });
-        return res.json(spot);
+        return res.status(201).json(spot);
     },
 };

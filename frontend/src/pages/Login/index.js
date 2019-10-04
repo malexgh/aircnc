@@ -7,7 +7,7 @@ export default function Login({ history }) {
     async function handleSubmit(event) {
         event.preventDefault();
         const response = await api.post('/sessions', { email });
-        if (response.status === 200) {
+        if (response.status === 200 || response.status === 201) {
             const { _id } = response.data;
             localStorage.setItem('user', _id);
             history.push('/dashboard');

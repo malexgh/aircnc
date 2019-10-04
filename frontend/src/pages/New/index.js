@@ -23,7 +23,7 @@ export default function New({ history }) {
     data.append('price', price);
     const response = await api.post('/spots', data, { headers: { user_id } });
     //console.log(response.data);
-    if (response.status === 200) {
+    if (response.status === 201) {
       history.push('/dashboard');
     }
   }
