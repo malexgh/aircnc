@@ -1,6 +1,7 @@
 # AirCnC
 
 App inspired on AirBnB
+Developed on the OmniStack Week 9 by [RocketSeat](https://rocketseat.com.br/)
 
 ## Built With
 
